@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  
+  resources :bookings, only: [:index, :show]
+  resources :packages, only: [:index, :show]
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root "articles#index"
+   root "packages#index"
 end
