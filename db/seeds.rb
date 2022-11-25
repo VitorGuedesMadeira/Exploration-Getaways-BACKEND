@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-@user1 = User.create(name: 'Vitor')
-@user2 = User.create(name: 'Mumenya')
-@user3 = User.create(name: 'Fernando') 
-@user4 = User.create(name: 'Karla') 
-@user5 = User.create(name: 'Diego') 
+@user1 = User.create(name: 'Vitor', email: 'a@a.com', password: 'password')
+@user2 = User.create(name: 'Mumenya', email: 'a@b.com', password: 'password1')
+@user3 = User.create(name: 'Fernando', email: 'a@c.com', password: 'password') 
+@user4 = User.create(name: 'Karla', email: 'a@d.com', password: 'password') 
+@user5 = User.create(name: 'Diego', email: 'a@e.com', password: 'password') 
 
 @package1 = Package.create(title: "Title Example 1!", description: "Description Example 1.", destination: "Destination Example 1", price: 1000, flight: true, hotel: "Hotel Example 1") 
 @package2 = Package.create(title: "Title Example 2!", description: "Description Example 2.", destination: "Destination Example 2", price: 1000, flight: true, hotel: "Hotel Example 2") 
