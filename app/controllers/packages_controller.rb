@@ -1,5 +1,6 @@
 class PackagesController < ApplicationController
-  def index; end
-
-  def show; end
+  def index
+    @packages = Package.all
+    render json: @packages
+  end
 end
