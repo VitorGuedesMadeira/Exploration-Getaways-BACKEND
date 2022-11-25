@@ -16,3 +16,9 @@
 @package3 = Package.create(title: "Title Example 3!", description: "Description Example 3.", destination: "Destination Example 3", price: 1000, flight: true, hotel: "Hotel Example 3") 
 @package4 = Package.create(title: "Title Example 4!", description: "Description Example 4.", destination: "Destination Example 4", price: 1000, flight: true, hotel: "Hotel Example 4") 
 @package5 = Package.create(title: "Title Example 5!", description: "Description Example 5.", destination: "Destination Example 5", price: 1000, flight: true, hotel: "Hotel Example 5") 
+
+Booking.create(user: @user1, package: @package1, start_date: '01/01/2023', end_date: '02/02/2023') 
+Booking.create(user: @user2, package: @package2, start_date: '01/01/2023', end_date: '02/02/2023') 
+Booking.create(user: @user3, package: @package3, start_date: '01/01/2023', end_date: '02/02/2023') 
+Booking.create(user: @user4, package: @package4, start_date: '01/01/2023', end_date: '02/02/2023') 
+Booking.create(user: @user5, package: @package5, start_date: '01/01/2023', end_date: '02/02/2023')
