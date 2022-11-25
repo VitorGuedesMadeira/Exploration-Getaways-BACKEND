@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   
   resources :bookings, only: [:index, :show]
   resources :packages, only: [:index, :show]
