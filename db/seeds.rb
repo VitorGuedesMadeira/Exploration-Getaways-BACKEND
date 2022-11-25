@@ -10,3 +10,9 @@
 @user3 = User.create(name: 'Fernando') 
 @user4 = User.create(name: 'Karla') 
 @user5 = User.create(name: 'Diego') 
+
+@package1 = Package.create(title: "Title Example 1!", description: "Description Example 1.", destination: "Destination Example 1", price: 1000, flight: true, hotel: "Hotel Example 1") 
+@package2 = Package.create(title: "Title Example 2!", description: "Description Example 2.", destination: "Destination Example 2", price: 1000, flight: true, hotel: "Hotel Example 2") 
+@package3 = Package.create(title: "Title Example 3!", description: "Description Example 3.", destination: "Destination Example 3", price: 1000, flight: true, hotel: "Hotel Example 3") 
+@package4 = Package.create(title: "Title Example 4!", description: "Description Example 4.", destination: "Destination Example 4", price: 1000, flight: true, hotel: "Hotel Example 4") 
+@package5 = Package.create(title: "Title Example 5!", description: "Description Example 5.", destination: "Destination Example 5", price: 1000, flight: true, hotel: "Hotel Example 5") 
