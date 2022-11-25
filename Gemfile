@@ -9,9 +9,6 @@ gem 'rails', '~> 7.0.4'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
-# Use RSpec for unit testings
-gem 'rspec', '~> 3.4'
-
 # Use for hiding credentials
 gem 'dotenv-rails'
 
