@@ -32,6 +32,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_25_152800) do
     t.decimal "price"
     t.boolean "flight"
     t.string "hotel"
+    t.integer "promotion"
+    t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

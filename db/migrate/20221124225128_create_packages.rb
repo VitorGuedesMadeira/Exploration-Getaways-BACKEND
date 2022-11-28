@@ -7,6 +7,8 @@ class CreatePackages < ActiveRecord::Migration[7.0]
       t.decimal :price
       t.boolean :flight
       t.string :hotel
+      t.integer :promotion
+      t.string :photo
 
       t.timestamps
     end
