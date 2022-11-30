@@ -17,6 +17,8 @@ gem 'puma', '~> 5.0'
 
 # setup devise authentication
 gem 'devise'
+gem 'devise-jwt'
+gem 'fast_jsonapi'
 
 gem 'rack-cors'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
