@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @booking = Booking.find(params[:booking_id])
+    @booking = Booking.find(params[:id])
     @booking.destroy
 
     respond_to do |format|
