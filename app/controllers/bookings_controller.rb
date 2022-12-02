@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    render json: currentuser.bookings.all
+    render json: current_user.bookings.all
   end
 
   def create
@@ -26,6 +26,8 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :package_id, :user_id)
+    params.require(:booking)
+      .permit(:start_date, :end_date, :package_id)
+      .with_defaults(user_id: current_user.id)
   end
 end
