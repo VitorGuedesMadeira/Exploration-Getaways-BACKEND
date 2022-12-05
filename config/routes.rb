@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get '/current_user', to: 'current_user#index'
   devise_for :users, path: '', path_names: {
     sign_in: 'login',
     sign_out: 'logout',
@@ -10,9 +9,9 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   
+  resources :users
   resources :bookings
   resources :packages
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
    root "packages#index"
