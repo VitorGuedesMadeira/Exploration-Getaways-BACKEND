@@ -8,7 +8,7 @@ class CreatePackages < ActiveRecord::Migration[7.0]
       t.boolean :flight
       t.string :hotel
       t.integer :promotion
-      t.string :photo
+      t.string :photo, array: true
 
       t.timestamps
     end
