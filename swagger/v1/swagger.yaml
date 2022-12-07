@@ -4,6 +4,69 @@ info:
   title: API V1
   version: v1
 paths:
+  "/bookings":
+    post:
+      summary: Creates a booking
+      tags:
+      - bookings
+      parameters: []
+      responses:
+        '201':
+          description: booking created
+        '422':
+          description: You need to sign in or sign up before continuing.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                start_date:
+                  type: string
+                end_date:
+                  type: string
+                user_id:
+                  type: integer
+                package_id:
+                  type: integer
+              required:
+              - id
+              - start_date
+              - end_date
+              - user_id
+              - package_id
+    get:
+      summary: list bookings
+      tags:
+      - bookings
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    start_date:
+                      type: string
+                    end_date:
+                      type: string
+                    user_id:
+                      type: integer
+                    package_id:
+                      type: integer
+                  required:
+                  - id
+                  - start_date
+                  - end_date
+                  - user_id
+                  - package_id
   "/packages":
     post:
       summary: Creates a package
@@ -87,4 +150,4 @@ servers:
 - url: http://localhost:4000
   variables:
     defaultHost:
-      default: www.example.com
+      default: http://localhost:4000
