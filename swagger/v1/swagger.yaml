@@ -1,0 +1,90 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/packages":
+    post:
+      summary: Creates a package
+      tags:
+      - packages
+      parameters: []
+      responses:
+        '201':
+          description: package created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                title:
+                  type: string
+                description:
+                  type: string
+                destination:
+                  type: string
+                price:
+                  type: integer
+                flight:
+                  type: boolean
+                promotion:
+                  type: integer
+                hotel:
+                  type: string
+                photo:
+                  type: string
+              required:
+              - id
+              - title
+              - description
+              - destination
+              - hotel
+    get:
+      summary: list packages
+      tags:
+      - packages
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    title:
+                      type: string
+                    description:
+                      type: string
+                    destination:
+                      type: string
+                    price:
+                      type: integer
+                    flight:
+                      type: boolean
+                    promotion:
+                      type: integer
+                    hotel:
+                      type: string
+                    photo:
+                      type: array
+                  required:
+                  - id
+                  - title
+                  - description
+                  - destination
+                  - hotel
+servers:
+- url: http://localhost:4000
+  variables:
+    defaultHost:
+      default: www.example.com
