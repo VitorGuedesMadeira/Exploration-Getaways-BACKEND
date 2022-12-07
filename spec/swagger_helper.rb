@@ -22,10 +22,10 @@ RSpec.configure do |config|
       paths: {},
       servers: [
         {
-          url: 'https://{defaultHost}',
+          url: 'http://localhost:4000',
           variables: {
             defaultHost: {
-              default: 'www.example.com'
+              default: 'http://localhost:4000'
             }
           }
         }

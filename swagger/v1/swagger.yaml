@@ -146,6 +146,38 @@ paths:
                   - description
                   - destination
                   - hotel
+  "/signup":
+    post:
+      summary: Creates an user
+      tags:
+      - registration
+      parameters: []
+      responses:
+        '201':
+          description: user created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    email:
+                      type: string
+                    password:
+                      type: string
+                    password_confirmation:
+                      type: string
+                  required:
+                  - name
+                  - email
+                  - password
 servers:
 - url: http://localhost:4000
   variables:
