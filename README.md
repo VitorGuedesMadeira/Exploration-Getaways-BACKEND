@@ -15,6 +15,7 @@ Exploration Getaways is a travelling application where the user can register new
 ![](./assets/images/readme2.jpg)
 ![](./assets/images/readme3.jpg)
 ![](./assets/images/readme4.jpg)
+![](./assets/images/readme5.jpg)
 
 # Live Demo Version
 
