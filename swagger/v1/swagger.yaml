@@ -38,7 +38,7 @@ paths:
               - user_id
               - package_id
     get:
-      summary: list bookings
+      summary: List all bookings
       tags:
       - bookings
       responses:
@@ -109,7 +109,7 @@ paths:
               - destination
               - hotel
     get:
-      summary: list packages
+      summary: List all packages
       tags:
       - packages
       responses:
