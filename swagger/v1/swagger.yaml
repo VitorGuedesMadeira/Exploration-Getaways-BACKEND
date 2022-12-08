@@ -146,6 +146,33 @@ paths:
                   - description
                   - destination
                   - hotel
+  "/login":
+    post:
+      summary: User signs-in
+      tags:
+      - login
+      parameters: []
+      responses:
+        '201':
+          description: user created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                    password:
+                      type: string
+                  required:
+                  - email
+                  - password
   "/signup":
     post:
       summary: Creates an user
