@@ -27,7 +27,7 @@ describe 'Bookings API' do
       end
     end
 
-    get('list bookings') do
+    get('List all bookings') do
       tags 'bookings'
       produces 'application/json'
       let!(:booking) do

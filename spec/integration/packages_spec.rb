@@ -33,7 +33,7 @@ describe 'Packages API' do
       end
     end
 
-    get('list packages') do
+    get('List all packages') do
       tags 'packages'
       produces 'application/json'
       let!(:package) do
