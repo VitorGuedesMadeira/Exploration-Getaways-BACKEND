@@ -29,7 +29,7 @@ Loading
 - Type `code .`
 - Run `bundle install`
 
-# NOTE you need to have a master key in config directory. If none exists generate one. 
+#### NOTE  you need to have a master key in config directory. If none exists generate one. 
       - First delete `credentials.yml.enc`
       - Run EDITOR="code" bundle exec rails credentials:edit 
 
