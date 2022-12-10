@@ -1,0 +1,212 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/bookings":
+    post:
+      summary: Creates a booking
+      tags:
+      - bookings
+      parameters: []
+      responses:
+        '201':
+          description: booking created
+        '422':
+          description: You need to sign in or sign up before continuing.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                start_date:
+                  type: string
+                end_date:
+                  type: string
+                user_id:
+                  type: integer
+                package_id:
+                  type: integer
+              required:
+              - id
+              - start_date
+              - end_date
+              - user_id
+              - package_id
+    get:
+      summary: List all bookings
+      tags:
+      - bookings
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    start_date:
+                      type: string
+                    end_date:
+                      type: string
+                    user_id:
+                      type: integer
+                    package_id:
+                      type: integer
+                  required:
+                  - id
+                  - start_date
+                  - end_date
+                  - user_id
+                  - package_id
+  "/packages":
+    post:
+      summary: Creates a package
+      tags:
+      - packages
+      parameters: []
+      responses:
+        '201':
+          description: package created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                title:
+                  type: string
+                description:
+                  type: string
+                destination:
+                  type: string
+                price:
+                  type: integer
+                flight:
+                  type: boolean
+                promotion:
+                  type: integer
+                hotel:
+                  type: string
+                photo:
+                  type: string
+              required:
+              - id
+              - title
+              - description
+              - destination
+              - hotel
+    get:
+      summary: List all packages
+      tags:
+      - packages
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    title:
+                      type: string
+                    description:
+                      type: string
+                    destination:
+                      type: string
+                    price:
+                      type: integer
+                    flight:
+                      type: boolean
+                    promotion:
+                      type: integer
+                    hotel:
+                      type: string
+                    photo:
+                      type: array
+                  required:
+                  - id
+                  - title
+                  - description
+                  - destination
+                  - hotel
+  "/login":
+    post:
+      summary: User signs-in
+      tags:
+      - login
+      parameters: []
+      responses:
+        '201':
+          description: user created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                    password:
+                      type: string
+                  required:
+                  - email
+                  - password
+  "/signup":
+    post:
+      summary: Creates an user
+      tags:
+      - registration
+      parameters: []
+      responses:
+        '201':
+          description: user created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    email:
+                      type: string
+                    password:
+                      type: string
+                    password_confirmation:
+                      type: string
+                  required:
+                  - name
+                  - email
+                  - password
+servers:
+- url: http://localhost:4000
+  variables:
+    defaultHost:
+      default: http://localhost:4000
